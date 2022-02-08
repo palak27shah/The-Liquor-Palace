@@ -14,3 +14,11 @@ function drinks_enqueue_block_editor_assets() {
     );
 }
 add_action( 'enqueue_block_editor_assets', 'drinks_enqueue_block_editor_assets' );
+
+function drinks_enqueue_block_assets() {
+    wp_enqueue_style( 
+        'block-editor-style', 
+        get_template_directory_uri() . '/assets/css/block-editor.css'
+    );
+}
+add_action( 'enqueue_block_assets', 'drinks_enqueue_block_assets' );
