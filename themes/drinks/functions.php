@@ -141,6 +141,14 @@ function drinks_scripts() {
 	);
 
 	wp_enqueue_script(
+		'what-input-script',
+		get_template_directory_uri() . '/assets/css/vendor/what-input.js',
+		array( 'jquery' ),
+		'5.2.10',
+		true
+	)
+
+	wp_enqueue_script(
 		'foundation-style',
 		get_template_directory_uri() . '/assets/css/vendor/foundation.min.js',
 		array( 'jquery', 'what-input-script' ),
