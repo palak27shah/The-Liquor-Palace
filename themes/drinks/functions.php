@@ -140,6 +140,14 @@ function drinks_scripts() {
 		'6.7.4' 
 	);
 
+	wp_enqueue_script(
+		'foundation-style',
+		get_template_directory_uri() . '/assets/css/vendor/foundation.min.js',
+		array( 'jquery', 'what-input-script' ),
+		'6.7.4',
+		true
+	)
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
