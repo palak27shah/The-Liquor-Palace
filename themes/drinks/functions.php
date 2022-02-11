@@ -146,7 +146,7 @@ function drinks_scripts() {
 		array( 'jquery' ),
 		'5.2.10',
 		true
-	)
+	);
 
 	wp_enqueue_script(
 		'foundation-style',
@@ -154,7 +154,7 @@ function drinks_scripts() {
 		array( 'jquery', 'what-input-script' ),
 		'6.7.4',
 		true
-	)
+	);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
