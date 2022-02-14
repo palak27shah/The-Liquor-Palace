@@ -3,7 +3,7 @@
     "version": 2,
     "settings": {
         "color": {
-            "custom": true,
+            "custom": false,
             "defaultPalette": false,
             "palette": [
                 {
@@ -17,9 +17,24 @@
                     "slug": "white"
                 },
                 {
-                    "color": "#ff5252",
-                    "name": "Grapefruit",
-                    "slug": "grapefruit"
+                    "color": "#9a8262",
+                    "name": "Brown",
+                    "slug": "brown"
+                },
+                {
+                    "color": "#e8ca93",
+                    "name": "LightBrown",
+                    "slug": "lightbrown"
+                },
+                {
+                    "color": "#f0e2a8",
+                    "name": "Skin",
+                    "slug": "skin"
+                },
+                {
+                    "color": "#fff68f",
+                    "name": "Yellow",
+                    "slug": "yellow"
                 }
             ]
         },
