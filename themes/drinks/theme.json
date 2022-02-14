@@ -17,6 +17,11 @@
                     "slug": "white"
                 },
                 {
+                    "color": "#524534",
+                    "name": "Darkbrown",
+                    "slug": "darkbrown"
+                },
+                {
                     "color": "#9a8262",
                     "name": "Brown",
                     "slug": "brown"
