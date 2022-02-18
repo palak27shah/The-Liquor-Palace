@@ -23,6 +23,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'drinks' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -44,11 +45,20 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
+		<div class="grid-x">
+				<div class="cell small-8"></div>
+				<!-- search bar -->
+				<div class="cell small-4 search">
+					<?php echo get_search_form(); ?>
+				</div><!-- .search -->
+			</div><!-- .grid-x -->
+
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'drinks' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(
+					'menu_class' 	 => 'main_menu',
 					'theme_location' => 'menu-primary',
 					'menu_id'        => 'primary-menu',
 				)
