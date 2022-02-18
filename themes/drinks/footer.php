@@ -15,7 +15,7 @@
 		<div class="site-info">
 			<?php
 				/* translators: 1: Copyright, 2: Site. */
-				printf( esc_html__( 'Copyright %1$s by %2$s.', 'drinks' ), '2022', '<a href=" ' . home_url() . ' ">The Liquor Palace</a>' );
+				printf( esc_html__( 'Copyright %1$s by %2$s.', 'drinks' ), '2022', '<a href=" ' . home_url() . ' ">Le palais des liqueuers</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

@@ -17,6 +17,11 @@
                     "slug": "white"
                 },
                 {
+                    "color": "#524534",
+                    "name": "Darkbrown",
+                    "slug": "darkbrown"
+                },
+                {
                     "color": "#9a8262",
                     "name": "Brown",
                     "slug": "brown"
@@ -39,8 +44,8 @@
             ]
         },
         "layout": {
-            "contentSize": "1000px",
-            "wideSize": "1200px"
+            "contentSize": "1050px",
+            "wideSize": "1100px"
         }
     }
 }
