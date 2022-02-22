@@ -45,16 +45,8 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-		<div class="grid-x">
-				<div class="cell small-8"></div>
-				<!-- search bar -->
-				<div class="cell small-4 search">
-					<?php echo get_search_form(); ?>
-				</div><!-- .search -->
-			</div><!-- .grid-x -->
-
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'drinks' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '', '' ); ?></button>
 			<?php
 			wp_nav_menu(
 				array(

@@ -12,3 +12,23 @@
     max-width: 100%;
 }
 
+.site-branding {
+    width: 200px;
+    height: auto;
+}
+
+.custom-logo {
+    width: auto;
+    height: 200px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.has-text-align-center {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* #secondary {
+    display: none;
+} */
+
