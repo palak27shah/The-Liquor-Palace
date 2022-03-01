@@ -148,6 +148,11 @@ function drinks_scripts() {
 		true
 	);
 
+	wp_enqueue_style( 
+		'woocommerce-style', 
+		get_template_directory_uri() . '/assets/css/woocommerce.css', 
+	);
+
 	wp_enqueue_script(
 		'foundation-style',
 		get_template_directory_uri() . '/assets/css/vendor/foundation.min.js',
