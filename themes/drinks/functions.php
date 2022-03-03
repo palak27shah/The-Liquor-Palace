@@ -50,6 +50,9 @@ function drinks_setup() {
 	register_nav_menus(
 		array(
 			'menu-primary' => esc_html__( 'Primary', 'drinks' ),
+			'menu-secondary' => esc_html__( 'Secondary', 'drinks' ),
+			'menu-social' => esc_html__( 'Social', 'drinks' ),
+			'menu-footer' => esc_html__( 'Footer', 'drinks' ),
 		)
 	);
 
