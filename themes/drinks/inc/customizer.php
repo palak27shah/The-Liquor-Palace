@@ -31,11 +31,8 @@ function drinks_customize_register( $wp_customize ) {
 		);
 	}
 
-	$wp_customize->( 'drinks_social_media', array(
-		'title' => esc_html__( 'Social Media', 'drinks' ),
-	) );
+	
 
-	$wp_customize->
 }
 add_action( 'customize_register', 'drinks_customize_register' );
 
