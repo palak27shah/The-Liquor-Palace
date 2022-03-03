@@ -56,7 +56,6 @@
 			if ( has_nav_menu( 'menu-primary' ) ){
 				wp_nav_menu(
 					array(
-						'menu_class' 	 => 'main_menu',
 						'theme_location' => 'menu-primary',
 						'menu_id'        => 'primary-menu',
 					)
