@@ -148,6 +148,11 @@ function drinks_scripts() {
 		true
 	);
 
+	wp_enqueue_style( 
+		'woocommerce-style', 
+		get_template_directory_uri() . '/assets/css/woocommerce.css', 
+	);
+
 	wp_enqueue_script(
 		'foundation-style',
 		get_template_directory_uri() . '/assets/css/vendor/foundation.min.js',
@@ -181,3 +186,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Block editor additions.
  */
 require get_template_directory() . '/inc/block-editor.php';
+
+/**
+ * Woocommerce additions.
+ */
+require get_template_directory() . '/inc/woocommerce.php';

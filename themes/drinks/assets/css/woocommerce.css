@@ -1,0 +1,4 @@
+.single-product .woocommerce-product-gallery,
+.single-product .entry-summary {
+    max-width: 500px;
+}

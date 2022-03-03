@@ -48,13 +48,15 @@
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '', '' ); ?></button>
 			<?php
-			wp_nav_menu(
-				array(
-					'menu_class' 	 => 'main_menu',
-					'theme_location' => 'menu-primary',
-					'menu_id'        => 'primary-menu',
-				)
-			);
+			if ( has_nav_menu( 'menu-primary' ) ){
+				wp_nav_menu(
+					array(
+						'menu_class' 	 => 'main_menu',
+						'theme_location' => 'menu-primary',
+						'menu_id'        => 'primary-menu',
+					)
+				);
+			}
 			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
