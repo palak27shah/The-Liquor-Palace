@@ -31,6 +31,14 @@ function drinks_customize_register( $wp_customize ) {
 		);
 	}
 
+	$wp_customize->add_setting( 'drinks_logo_alt' );
+
+	$wp_customize->add_control( new WP_customize_media_control( $wp_customize, 'drinks_logo_alt', array(
+		'label'    => 'Logo(alt)',
+		'section'  => 'title_tagline',
+		'priority' => 9,
+	) ) );
+
 	$wp_customize->add_panel( 'drinks_social_media', array(
 		'title' => esc_html__( 'Social Media', 'drinks' ),
 	) );
