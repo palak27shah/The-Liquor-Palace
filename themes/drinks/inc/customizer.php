@@ -31,6 +31,8 @@ function drinks_customize_register( $wp_customize ) {
 		);
 	}
 
+
+
 	$wp_customize->add_panel( 'drinks_social_media', array(
 		'title' => esc_html__( 'Social Media', 'drinks' ),
 	) );
@@ -86,6 +88,8 @@ function drinks_customize_register( $wp_customize ) {
 		'section'      => 'drinks_twitter',
 	) );
 
+	$wp_customize->add_setting( 'drinks_twitter_icon' );
+
 	$wp_customize->add_control( new WP_customize_media_control( $wp_customize, 'drinks_twitter_icon', array(
 		'label'    => 'Icon',
 		'section'  => 'drinks_twitter',
@@ -113,6 +117,8 @@ function drinks_customize_register( $wp_customize ) {
 		'section'      => 'drinks_youtube',
 	) );
 
+	$wp_customize->add_setting( 'drinks_youtube_icon' );
+
 	$wp_customize->add_control( new WP_customize_media_control( $wp_customize, 'drinks_youtube_icon', array(
 		'label'    => 'Icon',
 		'section'  => 'drinks_youtube',
@@ -139,6 +145,8 @@ function drinks_customize_register( $wp_customize ) {
 		'type'	       => 'url',
 		'section'      => 'drinks_instagram',
 	) );
+
+	$wp_customize->add_setting( 'drinks_instagram_icon' );
 
 	$wp_customize->add_control( new WP_customize_media_control( $wp_customize, 'drinks_instagram_icon', array(
 		'label'    => 'Icon',
