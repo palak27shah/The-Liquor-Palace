@@ -17,6 +17,11 @@
 .site-branding {
     width: 200px;
     height: auto;
+    display: inline-block;
+}
+
+.main-navigation {
+    display: inline-block;
 }
 
 .custom-logo {
