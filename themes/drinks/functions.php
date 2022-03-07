@@ -173,42 +173,42 @@ add_action( 'widgets_init', 'drinks_footer_widgets_init' );
  * Enqueue scripts and styles.
  */
 
-function drinks_footer_widgets_init() {
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer Area - Column 1', 'drinks' ),
-			'id'            => 'footer-area-column-1',
-			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer Area - Column 2', 'drinks' ),
-			'id'            => 'footer-area-column-2',
-			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-	register_sidebar(
-		array(
-			'name'          => esc_html__( 'Footer Area - Column 3', 'drinks' ),
-			'id'            => 'footer-area-column-3',
-			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
-			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-			'after_widget'  => '</section>',
-			'before_title'  => '<h2 class="widget-title">',
-			'after_title'   => '</h2>',
-		)
-	);
-}
-add_action( 'widgets_init', 'drinks_footer_widgets_init' );
+// function drinks_footer_widgets_init() {
+// 	register_sidebar(
+// 		array(
+// 			'name'          => esc_html__( 'Footer Area - Column 1', 'drinks' ),
+// 			'id'            => 'footer-area-column-1',
+// 			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
+// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 			'after_widget'  => '</section>',
+// 			'before_title'  => '<h2 class="widget-title">',
+// 			'after_title'   => '</h2>',
+// 		)
+// 	);
+// 	register_sidebar(
+// 		array(
+// 			'name'          => esc_html__( 'Footer Area - Column 2', 'drinks' ),
+// 			'id'            => 'footer-area-column-2',
+// 			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
+// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 			'after_widget'  => '</section>',
+// 			'before_title'  => '<h2 class="widget-title">',
+// 			'after_title'   => '</h2>',
+// 		)
+// 	);
+// 	register_sidebar(
+// 		array(
+// 			'name'          => esc_html__( 'Footer Area - Column 3', 'drinks' ),
+// 			'id'            => 'footer-area-column-3',
+// 			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
+// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+// 			'after_widget'  => '</section>',
+// 			'before_title'  => '<h2 class="widget-title">',
+// 			'after_title'   => '</h2>',
+// 		)
+// 	);
+// }
+// add_action( 'widgets_init', 'drinks_footer_widgets_init' );
 
 /**
  * Enqueue scripts and styles.

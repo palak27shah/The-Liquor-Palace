@@ -1,5 +1,7 @@
-.entry-content > *:not(.woocommerce){
-    max-width: 1000px;
+
+/* > *:not(.woocommerce) */
+.entry-content {
+    max-width: 1175px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -26,9 +28,9 @@
 
 .custom-logo {
     width: auto;
-    height: 200px;
+    height: 100px;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-left: 80px;
 }
 
 .has-text-align-center {
