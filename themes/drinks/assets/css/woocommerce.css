@@ -2,3 +2,73 @@
 .single-product .entry-summary {
     max-width: 500px;
 }
+
+.custom-logo {
+    height: 100px;
+    width: auto;
+}
+
+.woocommerce .products ul, .woocommerce ul.products{
+    margin: 100px;
+    padding: 0;
+}
+
+.woocommerce .woocommerce-result-count {
+    margin-left: 100px;
+    color: #524534;
+    margin-top: 30px;
+    font-family: 'Geneva';
+    font-size: 18px;
+}
+
+.woocommerce .woocommerce-ordering {
+    margin-right: 100px;
+    margin-top: 15px;
+}
+
+.orderby {
+    font-family: 'Geneva';
+    color: #524534;
+    border-radius: 17px;
+    background-color: #e8ca93;
+}
+
+.woocommerce-loop-product__title {
+    color: #524534;
+    font-size: 17px;
+    font-family: 'Geneva';
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.woocommerce ul.products li.product .price {
+    color: #9a8262;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Geneva';
+}
+
+.woocommerce ul.products li.product .button {
+    background-color: #9a8262;
+    color: #f0e2a8;
+    margin-top: 0;
+    font-family: 'Geneva';
+    width: 100%;
+}
+
+.woocommerce ul.products li.product .button:hover {
+    color: #524534;
+    background-color: #e8ca93;
+}
+
+.woocommerce span.onsale {
+    font-family: 'Geneva';
+    background-color: #e8ca93;
+    color: #524534
+}
+
+
