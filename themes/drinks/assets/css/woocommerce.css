@@ -6,7 +6,7 @@
 
 .single-product .woocommerce-product-gallery,
 .single-product .entry-summary {
-    max-width: 500px;
+    margin-top: 100px;
 }
 
 .custom-logo {
@@ -73,7 +73,8 @@
 .woocommerce .cart input.button:hover,
 .woocommerce #payment #place_order:hover, 
 .woocommerce-page #payment #place_order:hover, 
-.woocommerce .woocommerce-form-login .woocommerce-form-login__submit:hover{
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit:hover,
+.woocommerce div.product form.cart .button:hover {
     color: #524534;
     background-color: #e8ca93;
 }
@@ -96,7 +97,8 @@
 }
 
 .page-numbers,
-.woocommerce ul.products li.product a {
+.woocommerce ul.products li.product a,
+.quantity {
     color: #524534;
     font-family: 'Geneva';
 }
@@ -116,7 +118,8 @@
 .woocommerce-message, 
 .cart_totals,
 .woocommerce-checkout-review-order, #order_review_heading, 
-.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register,
+.woocommerce div.product, .comment-respond {
     margin-left: 100px;
     margin-right: 100px;
 }
@@ -126,7 +129,8 @@
 .woocommerce-checkout-review-order, .woocommerce-billing-fields__field-wrapper label,
 .woocommerce-billing-fields h3, .woocommerce-shipping-fields h3, .woocommerce-shipping-fields label,
 .woocommerce-additional-fields label, .order_review_heading, #order_review_heading,
-.woocommerce form.checkout_coupon, .woocommerce form .form-row label{
+.woocommerce form.checkout_coupon, .woocommerce form .form-row label,
+.woocommerce div.product p.price, .woocommerce div.product span.price{
     color: #524534;
     font-family: 'Geneva';
 }
@@ -134,7 +138,8 @@
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
 .woocommerce .cart .button, .woocommerce .cart input.button,
 .woocommerce #payment #place_order, .woocommerce-page #payment #place_order, 
-.woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
+.woocommerce div.product form.cart .button {
     background-color: #9a8262;
     color: #f0e2a8;
     font-family: 'Geneva';
@@ -146,6 +151,10 @@
 
 .woocommerce-shipping-fields, .woocommerce-additional-fields {
     margin-right: 100px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    display: none;
 }
 
 
