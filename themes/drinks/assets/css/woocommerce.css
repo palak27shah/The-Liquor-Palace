@@ -1,3 +1,9 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Geneva';
+    text-align: center;
+    color: #524534;
+}
+
 .single-product .woocommerce-product-gallery,
 .single-product .entry-summary {
     max-width: 500px;
@@ -64,7 +70,10 @@
 .woocommerce ul.products li.product .button:hover,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
 .woocommerce .cart .button:hover, 
-.woocommerce .cart input.button:hover {
+.woocommerce .cart input.button:hover,
+.woocommerce #payment #place_order:hover, 
+.woocommerce-page #payment #place_order:hover, 
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit:hover{
     color: #524534;
     background-color: #e8ca93;
 }
@@ -94,7 +103,7 @@
 
 .woocommerce nav.woocommerce-pagination ul li a:focus, 
 .woocommerce nav.woocommerce-pagination ul li a:hover, 
-.woocommerce nav.woocommerce-pagination ul li span.current {
+.woocommerce nav.woocommerce-pagination ul li span.current{
     color: #524534;
     background-color: #e8ca93;
 }
@@ -105,27 +114,38 @@
 
 .woocommerce-cart-form, 
 .woocommerce-message, 
-.cart_totals  {
+.cart_totals,
+.woocommerce-checkout-review-order, #order_review_heading, 
+.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register {
     margin-left: 100px;
     margin-right: 100px;
 }
 
 .woocommerce-cart-form, .product-name a, .woocommerce-message, 
-.product-name, .product-price, .product-quantity, .product-subtotal  {
-    color: #524534;
-    font-family: 'Geneva';
-}
-
-.cart_totals h2{
+.product-name, .product-price, .product-quantity, .product-subtotal,
+.woocommerce-checkout-review-order, .woocommerce-billing-fields__field-wrapper label,
+.woocommerce-billing-fields h3, .woocommerce-shipping-fields h3, .woocommerce-shipping-fields label,
+.woocommerce-additional-fields label, .order_review_heading, #order_review_heading,
+.woocommerce form.checkout_coupon, .woocommerce form .form-row label{
     color: #524534;
     font-family: 'Geneva';
 }
 
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
-.woocommerce .cart .button, .woocommerce .cart input.button {
+.woocommerce .cart .button, .woocommerce .cart input.button,
+.woocommerce #payment #place_order, .woocommerce-page #payment #place_order, 
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit {
     background-color: #9a8262;
     color: #f0e2a8;
     font-family: 'Geneva';
+}
+
+.woocommerce-billing-fields {
+    margin-left: 100px;
+}
+
+.woocommerce-shipping-fields, .woocommerce-additional-fields {
+    margin-right: 100px;
 }
 
 

@@ -16,6 +16,10 @@
     max-width: 100%;
 }
 
+.entry-content {
+    font-family: 'Geneva';
+}
+
 .site-branding {
     /* width: 200px;
     height: auto; */
@@ -48,10 +52,6 @@
     margin-left: 80px;
 }
 
-.has-text-align-center {
-    font-family: 'Times New Roman', Times, serif;
-}
-
 #primary-menu a {
     font-size: 22px;
     color: #e8ca93;
@@ -69,9 +69,11 @@
     transform: skewX(-20deg);
 }
 
-#the-liquor-palace {
+#the-liquor-palace, .has-text-align-center, .has-darkbrown-color {
     font-family: 'Optima', sans-serif;
 }
+
+
 
 
 
