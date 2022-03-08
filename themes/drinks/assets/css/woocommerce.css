@@ -58,9 +58,13 @@
     margin-top: 0;
     font-family: 'Geneva';
     width: 100%;
+    font-size: 16px;
 }
 
-.woocommerce ul.products li.product .button:hover {
+.woocommerce ul.products li.product .button:hover,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
+.woocommerce .cart .button:hover, 
+.woocommerce .cart input.button:hover {
     color: #524534;
     background-color: #e8ca93;
 }
@@ -68,7 +72,63 @@
 .woocommerce span.onsale {
     font-family: 'Geneva';
     background-color: #e8ca93;
-    color: #524534
+    color: #524534;
 }
+
+.woocommerce nav.woocommerce-pagination ul {
+    font-family: 'Geneva';
+    margin: 0px;
+    font-size: 16px;
+    border: 1px solid #524534;
+}
+
+.woocommerce nav.woocommerce-pagination ul li {
+    border: 1px solid #524534;
+}
+
+.page-numbers,
+.woocommerce ul.products li.product a {
+    color: #524534;
+    font-family: 'Geneva';
+}
+
+.woocommerce nav.woocommerce-pagination ul li a:focus, 
+.woocommerce nav.woocommerce-pagination ul li a:hover, 
+.woocommerce nav.woocommerce-pagination ul li span.current {
+    color: #524534;
+    background-color: #e8ca93;
+}
+
+.woocommerce .products ul, .woocommerce ul.products {
+    margin-bottom: 0px;
+}
+
+.woocommerce-cart-form, 
+.woocommerce-message, 
+.cart_totals  {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.woocommerce-cart-form, .product-name a, .woocommerce-message, 
+.product-name, .product-price, .product-quantity, .product-subtotal  {
+    color: #524534;
+    font-family: 'Geneva';
+}
+
+.cart_totals h2{
+    color: #524534;
+    font-family: 'Geneva';
+}
+
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce .cart .button, .woocommerce .cart input.button {
+    background-color: #9a8262;
+    color: #f0e2a8;
+    font-family: 'Geneva';
+}
+
+
+
 
 
