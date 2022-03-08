@@ -110,3 +110,9 @@
     color: #e8ca93 !important;
     font-family: 'Geneva' !important;
 }
+
+.entry-title a, .entry-meta, .entry-footer{
+    font-family: 'Geneva';
+    text-align: center;
+    color: #524534;
+}
