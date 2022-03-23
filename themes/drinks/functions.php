@@ -184,46 +184,6 @@ add_action( 'widgets_init', 'drinks_footer_widgets_init' );
  * Enqueue scripts and styles.
  */
 
-// function drinks_footer_widgets_init() {
-// 	register_sidebar(
-// 		array(
-// 			'name'          => esc_html__( 'Footer Area - Column 1', 'drinks' ),
-// 			'id'            => 'footer-area-column-1',
-// 			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
-// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-// 			'after_widget'  => '</section>',
-// 			'before_title'  => '<h2 class="widget-title">',
-// 			'after_title'   => '</h2>',
-// 		)
-// 	);
-// 	register_sidebar(
-// 		array(
-// 			'name'          => esc_html__( 'Footer Area - Column 2', 'drinks' ),
-// 			'id'            => 'footer-area-column-2',
-// 			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
-// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-// 			'after_widget'  => '</section>',
-// 			'before_title'  => '<h2 class="widget-title">',
-// 			'after_title'   => '</h2>',
-// 		)
-// 	);
-// 	register_sidebar(
-// 		array(
-// 			'name'          => esc_html__( 'Footer Area - Column 3', 'drinks' ),
-// 			'id'            => 'footer-area-column-3',
-// 			'description'   => esc_html__( 'Add widgets here.', 'drinks' ),
-// 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
-// 			'after_widget'  => '</section>',
-// 			'before_title'  => '<h2 class="widget-title">',
-// 			'after_title'   => '</h2>',
-// 		)
-// 	);
-// }
-// add_action( 'widgets_init', 'drinks_footer_widgets_init' );
-
-/**
- * Enqueue scripts and styles.
- */
 function drinks_scripts() {
 	wp_enqueue_style( 
 		'drinks-style', 
@@ -266,6 +226,7 @@ function drinks_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'drinks_scripts' );
 
+
 /**
  * Custom template tags for this theme.
  */
@@ -290,3 +251,8 @@ require get_template_directory() . '/inc/block-editor.php';
  * Woocommerce additions.
  */
 require get_template_directory() . '/inc/woocommerce.php';
+
+/**
+ * Custom post types addition.
+ */
+require get_template_directory() . '/inc/post-types.php';
