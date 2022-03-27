@@ -25,10 +25,17 @@
 
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'drinks' ); ?></a>
 <div id="page" class="site">
+
+	<!-- This is the site header for navigation inside of it. -->
+
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			if ( ! empty (has_custom_logo() ) ) {
+	/** 
+	 * This is the customizer feature to add the logo for th eiste.
+	*/
+
+	if ( ! empty (has_custom_logo() ) ) {
 				the_custom_logo();
 			} else {
 			if ( is_front_page() && is_home() ) :
@@ -50,9 +57,16 @@
 			?>
 		</div><!-- .site-branding -->
 
+		<!-- This is the site navigation menu. -->
+
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '', '' ); ?></button>
 			<?php
+
+			/**
+			 * Only print Primary menu if created and location  set. 
+			 */
+
 			if ( has_nav_menu( 'menu-primary' ) ){
 				wp_nav_menu(
 					array(
