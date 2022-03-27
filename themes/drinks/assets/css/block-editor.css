@@ -57,19 +57,32 @@
     color: #e8ca93;
     font-family: 'Optima', sans-serif;
     font-weight: 500;
+    position:relative;
 }
 
-#primary-menu a:hover {
-    color: #000000;
+/* Reference: https://www.30secondsofcode.org/css/s/hover-underline-animation */
+
+#primary-menu a::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 5px;
     background-color: #e8ca93;
-    border-radius: 20px;
-    transition: background-color 1s linear,
-                color 1s linear 0.5s;
-                width: 1s ease-out 1s;
-    transform: skewX(-20deg);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
 }
 
-#the-liquor-palace, .has-text-align-center, .has-darkbrown-color {
+#primary-menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#the-liquor-palace, 
+.has-text-align-center, 
+.has-darkbrown-color {
     font-family: 'Optima', sans-serif;
 }
 
@@ -83,9 +96,13 @@
     color: #e8ca93 !important;
     font-size: 32px;
     font-family: 'Optima', sans-serif !important;
+    cursor: pointer;
 }
 
-.footer-area-column-1, .footer-area-column-2, .footer-area-column-3, .footer-area-column-4 {
+.footer-area-column-1, 
+.footer-area-column-2, 
+.footer-area-column-3, 
+.footer-area-column-4 {
     width: 25%;
     flex-basis: 25%;
     flex-grow: 1;
@@ -103,7 +120,8 @@
     color: #f0e2a8;
 }
 
-#menu-footer-menu, #menu-footer-menu a {
+#menu-footer-menu, 
+#menu-footer-menu a {
     display: block;
     font-size: 22px;
     text-align: center;
@@ -111,7 +129,13 @@
     font-family: 'Geneva' !important;
 }
 
-.entry-title a, .entry-meta, .entry-footer{
+#menu-footer-menu a:hover {
+    color: #f0e2a8 !important;
+}
+
+.entry-title a, 
+.entry-meta, 
+.entry-footer{
     font-family: 'Geneva';
     text-align: center;
     color: #524534;
