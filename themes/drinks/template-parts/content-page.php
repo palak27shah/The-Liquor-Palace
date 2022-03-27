@@ -12,7 +12,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
-		if ( is_page( 'shop' ) || is_page( 'cart' ) || is_page( 'checkout' ) || is_page( 'my-account' ) || is_page( 'vintage-collection' )) :
+		if ( is_page( 'shop' ) || is_page( 'cart' ) || is_page( 'checkout' ) || is_page( 'my-account' ) || is_page( 'vintage-collection' ) || is_page( 'privacy-policy' ) || is_page( 'terms-conditions' )) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		endif;
 		?>
