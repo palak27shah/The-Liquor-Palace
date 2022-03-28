@@ -1,4 +1,10 @@
+/* 
+*
+* Reference for "how to comment code": https://packagecontrol.io/packages/Fancy%20CSS%20Comments
+*
+*/
 
+/* General stylinf for the entry content that is all the content that occupies scree. */
 /* > *:not(.woocommerce) */
 .entry-content > *:not(.woocommerce){
     max-width: 1100px;
@@ -20,12 +26,12 @@
     font-family: 'Geneva';
 }
 
-.site-branding {
-    /* width: 200px;
-    height: auto; */
-    display: inline-block;
-}
+/*
+*======================================
+*            header comment            *
+======================================*/
 
+/* General style for header  */
 .site-header {
     background-color: #222222;
     position: fixed;
@@ -35,21 +41,35 @@
     z-index: 200;
 }
 
-.site-main {
-    margin-top: 110px;
+/* General style for displaying the logo on the screen */
+.site-branding {
+    display: inline-block;
 }
 
-.main-navigation {
-    /*display: inline-block;*/
-    float: right;
-    padding-right: 50px;
-}
-
+/* Specific style to display logo in the header */
 .custom-logo {
     width: auto !important;
     height: 100px !important;
     margin-top: 10px;
     margin-left: 80px;
+}
+
+/* Displays navigation menu in the header */
+#site-navigation {
+    float: right;
+    padding-right: 50px;
+    margin-top: 10px;
+}
+
+/**
+*
+*  Comments for custom pages using blocks.
+*
+*/
+
+/* Content area for pages */
+.site-main {
+    margin-top: 110px;
 }
 
 #primary-menu a {

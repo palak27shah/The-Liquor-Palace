@@ -32,9 +32,8 @@
 		<div class="site-branding">
 			<?php
 	/** 
-	 * This is the customizer feature to add the logo for th eiste.
+	 * Load the site logo if uploaded to the customizer.
 	*/
-
 	if ( ! empty (has_custom_logo() ) ) {
 				the_custom_logo();
 			} else {
@@ -58,15 +57,12 @@
 		</div><!-- .site-branding -->
 
 		<!-- This is the site navigation menu. -->
-
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( '', '' ); ?></button>
 			<?php
-
 			/**
-			 * Only print Primary menu if created and location  set. 
+			 * Only print Primary menu if created and location set. 
 			 */
-
 			if ( has_nav_menu( 'menu-primary' ) ){
 				wp_nav_menu(
 					array(
