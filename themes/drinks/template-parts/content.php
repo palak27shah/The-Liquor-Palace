@@ -14,7 +14,7 @@
 		<?php
 		if ( ! is_singular( 'product') ) {
 			if ( is_singular() ) :
-				if ( is_page( 'shop' ) || is_page( 'cart' ) || is_page( 'checkout' ) || is_page( 'my-account' )) :
+				if ( ! is_page( 'home', 'history' )) :
 					the_title( '<h1 class="entry-title">', '</h1>' );
 				endif;
 			else :
