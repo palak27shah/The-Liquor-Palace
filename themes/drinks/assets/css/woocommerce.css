@@ -1,72 +1,88 @@
+/* 
+*
+* This is woocommerce styling for the items in hte woocommerce.
+*
+* Reference for "how to comment code": https://packagecontrol.io/packages/Fancy%20CSS%20Comments
+*
+*/
+
+/*=============================================================================================================
+*            General styles for in the woocommerce pages           *
+===============================================================================================================*/
+
+/* WOOCOMMERCE PAGES
+    ====================================================================== 
+*/
+
+/* Colour and typography for all the headings in woocommerce */
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
     font-family: 'Geneva';
     text-align: center;
     color: #524534;
 }
 
-.single-product .woocommerce-product-gallery,
-.single-product .entry-summary {
-    margin-top: 100px;
-}
-
-.custom-logo {
-    height: 100px;
-    width: auto;
-}
-
-.woocommerce .products ul, .woocommerce ul.products{
-    margin: 100px;
-    padding: 0;
-}
-
-.woocommerce .woocommerce-result-count {
+/* General styling for all the main content that occupies the screen in woocommerce */
+.woocommerce-cart-form, 
+.woocommerce-message, 
+.cart_totals,
+.woocommerce-checkout-review-order, 
+#order_review_heading, 
+.woocommerce form.checkout_coupon, 
+.woocommerce form.login, 
+.woocommerce form.register,
+.woocommerce div.product, 
+.comment-respond,
+.woocommerce-info {
     margin-left: 100px;
-    color: #524534;
-    margin-top: 30px;
-    font-family: 'Geneva';
-    font-size: 18px;
-}
-
-.woocommerce .woocommerce-ordering {
     margin-right: 100px;
-    margin-top: 15px;
 }
 
-.orderby {
-    font-family: 'Geneva';
+/* Colour and typography for all the common content in woocommerce */
+.woocommerce-cart-form, 
+.product-name a, 
+.woocommerce-message, 
+.product-name, 
+.product-price, 
+.product-quantity, 
+.product-subtotal,
+.woocommerce-checkout-review-order, 
+.woocommerce-billing-fields__field-wrapper label,
+.woocommerce-billing-fields h3, 
+.woocommerce-shipping-fields h3, 
+.woocommerce-shipping-fields label,
+.woocommerce-additional-fields label, 
+.order_review_heading, 
+#order_review_heading,
+.woocommerce form.checkout_coupon, 
+.woocommerce form .form-row label,
+.woocommerce div.product p.price, 
+.woocommerce div.product span.price,
+.woocommerce-error, 
+.woocommerce-info, 
+.woocommerce-message{
     color: #524534;
-    border-radius: 17px;
-    background-color: #e8ca93;
-}
-
-.woocommerce-loop-product__title {
-    color: #524534;
-    font-size: 17px;
-    font-family: 'Geneva';
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.woocommerce ul.products li.product .price {
-    color: #9a8262;
-    font-size: 16px;
-    text-align: center;
     font-family: 'Geneva';
 }
 
-.woocommerce ul.products li.product .button {
+/* BUTTONS
+    ====================================================================== 
+*/
+
+/* Colour and typography for all the buttons in the woocommerce */
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
+.woocommerce .cart .button, 
+.woocommerce .cart input.button,
+.woocommerce #payment #place_order, 
+.woocommerce-page #payment #place_order, 
+.woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
+.woocommerce div.product form.cart .button,
+.woocommerce a.button {
     background-color: #9a8262;
     color: #f0e2a8;
-    margin-top: 0;
     font-family: 'Geneva';
-    width: 100%;
-    font-size: 16px;
 }
 
+/* Hover effect for all the woocommerce buttons */
 .woocommerce ul.products li.product .button:hover,
 .woocommerce-cart .wc-proceed-to-checkout a.checkout-button:hover,
 .woocommerce .cart .button:hover, 
@@ -80,30 +96,33 @@
     background-color: #e8ca93;
 }
 
-.woocommerce span.onsale {
-    font-family: 'Geneva';
-    background-color: #e8ca93;
+/*=========================================  End of general styles comment block  =============================*/
+
+
+/*=============================================================================================================
+*                             Specific Styles for WOOCOMMERCE PAGES                        *
+===============================================================================================================*/
+
+/* SHOP PAGE
+    ====================================================================== 
+*/
+
+/* Style for showing how many products on the screen (Showing 1-39 products)*/
+.woocommerce .woocommerce-result-count {
+    margin-left: 100px;
     color: #524534;
-}
-
-.woocommerce nav.woocommerce-pagination ul {
+    margin-top: 30px;
     font-family: 'Geneva';
-    margin: 0px;
-    font-size: 16px;
-    border: 1px solid #524534;
+    font-size: 18px;
 }
 
-.woocommerce nav.woocommerce-pagination ul li {
-    border: 1px solid #524534;
+/* Style for the default sorting box */
+.woocommerce .woocommerce-ordering {
+    margin-right: 100px;
+    margin-top: 15px;
 }
 
-.page-numbers,
-.woocommerce ul.products li.product a,
-.quantity {
-    color: #524534;
-    font-family: 'Geneva';
-}
-
+/* Hover effect for the pagination on the shop page */
 .woocommerce nav.woocommerce-pagination ul li a:focus, 
 .woocommerce nav.woocommerce-pagination ul li a:hover, 
 .woocommerce nav.woocommerce-pagination ul li span.current{
@@ -111,67 +130,122 @@
     background-color: #e8ca93;
 }
 
-.woocommerce .products ul, .woocommerce ul.products {
-    margin-bottom: 0px;
+/* Style for Shopping product in what order (default sorting) */
+.orderby {
+    font-family: 'Geneva';
+    color: #524534;
+    border-radius: 17px;
+    background-color: #e8ca93;
 }
 
-.woocommerce-cart-form, 
-.woocommerce-message, 
-.cart_totals,
-.woocommerce-checkout-review-order, #order_review_heading, 
-.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register,
-.woocommerce div.product, .comment-respond,
-.woocommerce-info {
-    margin-left: 100px;
-    margin-right: 100px;
-}
-
-.woocommerce-cart-form, .product-name a, .woocommerce-message, 
-.product-name, .product-price, .product-quantity, .product-subtotal,
-.woocommerce-checkout-review-order, .woocommerce-billing-fields__field-wrapper label,
-.woocommerce-billing-fields h3, .woocommerce-shipping-fields h3, .woocommerce-shipping-fields label,
-.woocommerce-additional-fields label, .order_review_heading, #order_review_heading,
-.woocommerce form.checkout_coupon, .woocommerce form .form-row label,
-.woocommerce div.product p.price, .woocommerce div.product span.price,
-.woocommerce-error, .woocommerce-info, .woocommerce-message{
+/* Typography and colour for page number, add to cart button and product names */
+.page-numbers,
+.woocommerce ul.products li.product a,
+.quantity {
     color: #524534;
     font-family: 'Geneva';
 }
 
-.woocommerce-cart .wc-proceed-to-checkout a.checkout-button, 
-.woocommerce .cart .button, .woocommerce .cart input.button,
-.woocommerce #payment #place_order, .woocommerce-page #payment #place_order, 
-.woocommerce .woocommerce-form-login .woocommerce-form-login__submit,
-.woocommerce div.product form.cart .button,
-.woocommerce a.button {
-    background-color: #9a8262;
-    color: #f0e2a8;
+/* Styles for product name in the shop page */
+.woocommerce-loop-product__title {
+    color: #524534;
+    font-size: 17px;
     font-family: 'Geneva';
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
-.woocommerce-billing-fields {
-    margin-left: 100px;
+/* Style for product image and content in single template when it is opened. */
+.single-product .woocommerce-product-gallery,
+.single-product .entry-summary {
+    margin-top: 100px;
 }
 
-.woocommerce-shipping-fields, .woocommerce-additional-fields {
-    margin-right: 100px;
+/* Style for the single product on the shop page */
+.woocommerce .products ul, 
+.woocommerce ul.products{
+    margin: 100px;
+    padding: 0;
+    margin-bottom: 0px;
 }
 
+/* The tabs that help to select description option on single product page  */
 .woocommerce div.product .woocommerce-tabs ul.tabs {
     display: none;
 }
 
+/* Styles for product price in woocommerce */
+.woocommerce ul.products li.product .price {
+    color: #9a8262;
+    font-size: 16px;
+    text-align: center;
+    font-family: 'Geneva';
+}
+
+/* Specific styling for add to cart button */
+.woocommerce ul.products li.product .button {
+    background-color: #9a8262;
+    color: #f0e2a8;
+    margin-top: 0;
+    font-family: 'Geneva';
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Colour and typography for on sale button on sale products */
+.woocommerce span.onsale {
+    font-family: 'Geneva';
+    background-color: #e8ca93;
+    color: #524534;
+}
+
+/* woocommerce pagination styled for unordered list (outsite border)  */
+.woocommerce nav.woocommerce-pagination ul {
+    font-family: 'Geneva';
+    margin: 0px;
+    font-size: 16px;
+    border: 1px solid #524534;
+}
+
+/* Border for the pagination list (inside border for number of pages) */
+.woocommerce nav.woocommerce-pagination ul li {
+    border: 1px solid #524534;
+}
+
+
+/* CART PAGE
+    ====================================================================== 
+*/
+
+/* Border top colour for the cart page when it is empty */
 .woocommerce-info {
     border-top-color: #9a8262;
 }
 
+/* Colour for the sentence which displays on cart screen when it is empty (Your cart is empty) */
 .woocommerce-info::before {
     color: #9a8262;
 }
 
 
+/* CHECKOUT PAGE
+    ====================================================================== 
+*/
 
+/* Style for billing inforamtion on the checkout page */
+.woocommerce-billing-fields {
+    margin-left: 100px;
+}
 
+/* Styles for shipping information and additional fields on the checkout page */
+.woocommerce-shipping-fields, 
+.woocommerce-additional-fields {
+    margin-right: 100px;
+}
 
-
+/*=========================================  End of specific styles comment block  =============================*/
 
