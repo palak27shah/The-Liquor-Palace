@@ -30,35 +30,38 @@
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-
-	<?php drinks_post_thumbnail(); ?>
-
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'drinks' ),
-					array(
-						'span' => array(
-							'class' => array(),
+	<div class="grid-container">
+		<div class="grid-x grid-margin-x grid-margin-y">
+			<div class="cell small-12 medium-4">
+				<?php drinks_post_thumbnail(); ?>
+			</div>
+			<div class="entry-content cell small-12 medium-8">
+				<?php
+				the_content(
+					sprintf(
+						wp_kses(
+							/* translators: %s: Name of current post. Only visible to screen readers */
+							__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'drinks' ),
+							array(
+								'span' => array(
+									'class' => array(),
+								),
+							)
 						),
+						wp_kses_post( get_the_title() )
 					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+				);
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'drinks' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
-
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'drinks' ),
+						'after'  => '</div>',
+					)
+				);
+				?>
+			</div><!-- .entry-content -->
+		</div>
+	</div>
 	<footer class="entry-footer">
 		<?php drinks_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

@@ -13,31 +13,67 @@
 
     <!-- Widgets added in the footer to make it work dynamically. -->
 	<footer id="colophon" class="site-footer">
-		<div class="custom-footer-row">
-            <!-- Footer column-1 -->
-			<?php if ( is_active_sidebar( 'footer-area-column-1' ) ) : ?>
-                <div class="footer-area-column-1">
-                    <?php dynamic_sidebar( 'footer-area-column-1' ); ?>
-                </div>
-            <?php endif; ?>
-            <!-- Footer column-2 -->
-			<?php if ( is_active_sidebar( 'footer-area-column-2' ) ) : ?>
-                <div class="footer-area-column-2">
-                    <?php dynamic_sidebar( 'footer-area-column-2' ); ?>
-                </div>
-            <?php endif; ?>
-            <!-- Footer column-3 -->
-			<?php if ( is_active_sidebar( 'footer-area-column-3' ) ) : ?>
-                <div class="footer-area-column-3">
-                    <?php dynamic_sidebar( 'footer-area-column-3' ); ?>
-                </div>
-            <?php endif; ?>
-            <!-- Footer column-4 -->
-			<?php if ( is_active_sidebar( 'footer-area-column-4' ) ) : ?>
-                <div class="footer-area-column-4">
-                    <?php dynamic_sidebar( 'footer-area-column-4' ); ?>
-                </div>
-            <?php endif; ?>
+        <div class="custom-footer-row grid-container">
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <?php
+                    $mixture_args = array(
+                        'post_type'     => array( 'drinks_mixture' ),
+                        'post_status'   => 'publish',
+                        'posts_per_page' => '3',
+                    );
+                    // The Query
+                    $mixture_query = new WP_Query( $mixture_args );
+
+                    // The Loop
+                    if ( $mixture_query->have_posts() ) {
+                        while ( $mixture_query->have_posts() ) {
+                ?>
+                    <div class="footer-recent-posts cell small-12 medium-4">
+                <?php        
+                    $mixture_query->the_post();
+                    the_post_thumbnail( 'thumbnail', ['class' => 'recent_posts_featured_image'] );
+                ?>
+                        <div class="recent_post_details">
+                <?php
+                    the_title( '<h5><a href="' . get_permalink() . '">', '</a></h5>' );
+                    the_excerpt( '<p>', '</p>');
+                ?>
+                        </div><!-- recent_post_details -->
+                    </div> <!-- footer-recent-posts -->
+                <?php
+                    }
+                        wp_reset_postdata();
+                    }
+                ?>
+            </div>
+        </div>
+		<div class="custom-footer-row grid-container">
+            <div class="grid-x grid-margin-x grid-margin-y">
+                <!-- Footer column-1 - Made for quick links menu -->
+                <?php if ( is_active_sidebar( 'footer-area-column-1' ) ) : ?>
+                    <div class="footer-area-column-1 cell small-12 medium-3">
+                        <?php dynamic_sidebar( 'footer-area-column-1' ); ?>
+                    </div>
+                <?php endif; ?>
+                <!-- Footer column-2 -->
+                <?php if ( is_active_sidebar( 'footer-area-column-2' ) ) : ?>
+                    <div class="footer-area-column-2 cell small-12 medium-3">
+                        <?php dynamic_sidebar( 'footer-area-column-2' ); ?>
+                    </div>
+                <?php endif; ?>
+                <!-- Footer column-3 -->
+                <?php if ( is_active_sidebar( 'footer-area-column-3' ) ) : ?>
+                    <div class="footer-area-column-3 cell small-12 medium-3">
+                        <?php dynamic_sidebar( 'footer-area-column-3' ); ?>
+                    </div>
+                <?php endif; ?>
+                <!-- Footer column-4 -->
+                <?php if ( is_active_sidebar( 'footer-area-column-4' ) ) : ?>
+                    <div class="footer-area-column-4 cell small-12 medium-3">
+                        <?php dynamic_sidebar( 'footer-area-column-4' ); ?>
+                    </div>
+                <?php endif; ?>
+            </div>
 		</div>
 		<div class="site-info">
 			<?php
