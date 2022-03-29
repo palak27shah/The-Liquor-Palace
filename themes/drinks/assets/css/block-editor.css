@@ -4,7 +4,10 @@
 *
 */
 
-/* General stylinf for the entry content that is all the content that occupies scree. */
+/*=============================================================================================================
+*            General styling for the entry content (which displays on screen )            *
+===============================================================================================================*/
+
 /* > *:not(.woocommerce) */
 .entry-content > *:not(.woocommerce){
     max-width: 1100px;
@@ -12,6 +15,7 @@
     margin-right: auto;
 }
 
+/* Display area for all the content */
 .entry-content > *.alignwide,
 .alignwide {
     max-width: 1200px;
@@ -22,9 +26,21 @@
     max-width: 100%;
 }
 
+/* Typography for all content */
 .entry-content {
     font-family: 'Geneva';
 }
+
+/* General styles for all headings */
+.entry-title a, 
+.entry-meta, 
+.entry-footer{
+    font-family: 'Geneva';
+    text-align: center;
+    color: #524534;
+}
+
+/*=========================================  End of Entry comment block  =============================*/
 
 /*
 *======================================
@@ -61,17 +77,7 @@
     margin-top: 10px;
 }
 
-/**
-*
-*  Comments for custom pages using blocks.
-*
-*/
-
-/* Content area for pages */
-.site-main {
-    margin-top: 110px;
-}
-
+/* Styles for top navigation menu  */
 #primary-menu a {
     font-size: 22px;
     color: #e8ca93;
@@ -80,8 +86,13 @@
     position:relative;
 }
 
-/* Reference: https://www.30secondsofcode.org/css/s/hover-underline-animation */
-
+/* 
+*
+* Hover for menu-items in primary menu. 
+*
+* Reference: https://www.30secondsofcode.org/css/s/hover-underline-animation 
+*
+*/
 #primary-menu a::after {
     content: '';
     position: absolute;
@@ -100,18 +111,91 @@
     transform-origin: bottom left;
 }
 
+/*========================================================================c
+*            Comments for custom pages using blocks.           *
+=========================================================================*/
+
+/* Content area to display pages */
+.site-main {
+    margin-top: 110px;
+}
+
+/* Typography for the content.  */
 #the-liquor-palace, 
 .has-text-align-center, 
 .has-darkbrown-color {
     font-family: 'Optima', sans-serif;
 }
 
-.custom-footer-row {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #222222;
+/* 
+* Hover effect for gallery images in the content area.
+*
+* Resource Link for hover effect: https://www.sliderrevolution.com/resources/css-hover-effects/
+*
+ */
+.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) a, 
+.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img:hover {
+    animation-duration: 0.3s;
+    box-shadow: 0 14px 28px #524534, 0 10px 10px #524534;
 }
 
+/*====================  End of Section comment block  ======================*/
+
+
+/*==================  footer comment  ==================*/
+
+/* Three custom post types from archieves page */
+.footer-recent-posts {
+    display: flex;
+    position: relative;
+    width: 33%;
+    flex-basis: 33%;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 
+Recent posts images hover will display title and excerpt
+Code reference from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity
+ */
+.recent_posts_featured_image {
+    opacity: 1;
+    display: inline-block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.recent_post_details {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #e8ca93;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.footer-recent-posts:hover .recent_posts_featured_image {
+    opacity: 0.2;
+}
+
+.footer-recent-posts:hover .recent_post_details {
+    opacity: 0.9;
+}
+
+/* General styles for footer content in the row */
+.custom-footer-row {
+    background-color: #222222;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Specific styles for titles in the footer  */
 .widget-title {
     color: #e8ca93 !important;
     font-size: 32px;
@@ -119,27 +203,13 @@
     cursor: pointer;
 }
 
-.footer-area-column-1, 
-.footer-area-column-2, 
-.footer-area-column-3, 
-.footer-area-column-4 {
-    width: 25%;
-    flex-basis: 25%;
-    flex-grow: 1;
+
+/* Hover for links in 'quick-links' */
+#menu-footer-menu a:hover {
+    color: #f0e2a8 !important;
 }
 
-.footer-area-column-4 img {
-    margin-top: 20px;
-}
-
-.site-info {
-    text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #9a8262;
-    color: #f0e2a8;
-}
-
+/* Specific styles for quick links */
 #menu-footer-menu, 
 #menu-footer-menu a {
     display: block;
@@ -149,26 +219,20 @@
     font-family: 'Geneva' !important;
 }
 
-#menu-footer-menu a:hover {
-    color: #f0e2a8 !important;
+/* Margin adjusted for newsletter */
+.footer-area-column-4 img {
+    margin-top: 20px;
 }
 
-.entry-title a, 
-.entry-meta, 
-.entry-footer{
-    font-family: 'Geneva';
+/* Adjust copyright info in the footer */
+.site-info {
     text-align: center;
-    color: #524534;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #9a8262;
+    color: #f0e2a8;
 }
 
-/* 
-Resource Link for hover effect: https://www.sliderrevolution.com/resources/css-hover-effects/
- */
-
-.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) a, 
-.wp-block-gallery.has-nested-images.is-cropped figure.wp-block-image:not(#individual-image) img:hover {
-    animation-duration: 0.3s;
-    box-shadow: 0 14px 28px #524534, 0 10px 10px #524534;
+.custom-footer-row.grid-container {
+    max-width: 100% !important;
 }
-
-
