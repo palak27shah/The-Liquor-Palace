@@ -1,5 +1,7 @@
 /* 
 *
+* This is block-editor css to style the blocks for the site.
+*
 * Reference for "how to comment code": https://packagecontrol.io/packages/Fancy%20CSS%20Comments
 *
 */
@@ -40,7 +42,7 @@
     color: #524534;
 }
 
-/*=========================================  End of Entry comment block  =============================*/
+/*=========================================  End of Entry content comment block  =============================*/
 
 /*
 *======================================
@@ -53,7 +55,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     z-index: 200;
 }
 
@@ -142,7 +144,7 @@
 /*====================  End of Section comment block  ======================*/
 
 
-/*==================  footer comment  ==================*/
+/*==================  Footer comment  ==================*/
 
 /* Three custom post types from archieves page */
 .footer-recent-posts {
@@ -159,6 +161,8 @@
 Recent posts images hover will display title and excerpt
 Code reference from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity
  */
+
+/* Recent postd cover image in footer */
 .recent_posts_featured_image {
     opacity: 1;
     display: inline-block;
@@ -166,6 +170,7 @@ Code reference from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_c
     backface-visibility: hidden;
 }
 
+/* Recent post excerpt style in the footer */
 .recent_post_details {
     transition: .5s ease;
     opacity: 0;
@@ -180,10 +185,12 @@ Code reference from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_c
     padding: 10px;
 }
 
+/* Recent posts cover image hover effect */
 .footer-recent-posts:hover .recent_posts_featured_image {
     opacity: 0.2;
 }
 
+/* Recent posts details hover effect */
 .footer-recent-posts:hover .recent_post_details {
     opacity: 0.9;
 }
@@ -223,6 +230,9 @@ Code reference from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_c
 .footer-area-column-4 img {
     margin-top: 20px;
 }
+.footer-area-column-4 label.wsf-label {
+    color: #f0e2a8;
+}
 
 /* Adjust copyright info in the footer */
 .site-info {
@@ -235,4 +245,154 @@ Code reference from: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_c
 
 .custom-footer-row.grid-container {
     max-width: 100% !important;
+}
+
+.menu-toggle {
+    padding-top: 40px;
+}
+
+.menu-toggle > input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: 0px;
+    right: -5px;      
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 700px) {
+    /* Responsive hamburger menu for mobile devices 
+    Reference taken from : https://codepen.io/erikterwan/pen/EVzeRP */
+    .menu-toggle
+    {
+        padding-top: 0px;
+        display: block;
+        position: absolute;
+        top: 55px;
+        left: 315px;
+        /* z-index: 1; */
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .menu-toggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: 0px;
+        right: -5px;      
+        cursor: pointer;
+        opacity: 0; /* hide this */
+        z-index: 2; /* and place it over the hamburger */
+        -webkit-touch-callout: none;
+    }
+
+    .menu-toggle span {
+        display: block;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: #e8ca93;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                    opacity 0.55s ease;
+    }
+
+    .menu-toggle span:first-child
+    {
+        transform-origin: 0% 0%;
+    }
+
+    .menu-toggle span:nth-last-child(2)
+    {
+        transform-origin: 0% 100%;
+    }
+
+    .menu-toggle input:checked ~ span
+    {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #e8ca93;
+    }
+
+    .menu-toggle input:checked ~ span:nth-last-child(3)
+    {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    .menu-toggle input:checked ~ span:nth-last-child(2)
+    {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+
+    #primary-menu
+    {
+        position: absolute;
+        width: 300px;
+        left: 75px;
+        /* margin: -100px 0 0 -50px; */
+        /* padding: 50px;
+        padding-top: 125px; */
+        
+        background: #222222;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        
+        transform-origin: 0% 0%;
+        transform: translate(0%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    .menu-toggle input:checked ~ .menu-primary-menu-container #primary-menu {
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+
+    #primary-menu li
+    {
+        padding: 10px 0;
+        font-size: 22px;
+    }
+
+    /*
+    * And let's slide it in from the left
+    */
+    .menu-toggle input:checked ~ ul
+    {
+        transform: none;
+    }
+
+    .site-main {
+        margin-top: 140px;
+    }
+}
+
+/* Media query for tablet devices */
+@media only screen and (min-width: 701px) and (max-width: 850px) {
+    .footer-area-column-2 section center iframe {
+        width: 150px;
+    }
+
+    .menu-primary-menu-container {
+        padding-left: 110px;
+        margin-top: -20px;
+    }
+    .recent_post_details {
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+    }
 }
